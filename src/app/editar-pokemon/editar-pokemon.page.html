@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Pokémon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nome do Pokémon</ion-label>
+    <ion-input [(ngModel)]="nome" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Poder (número)</ion-label>
+    <ion-input [(ngModel)]="poder" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Tipo do Pokémon</ion-label>
+    <ion-select [(ngModel)]="tipo">
+      <ion-select-option value="Fogo">Fogo</ion-select-option>
+      <ion-select-option value="Água">Água</ion-select-option>
+      <ion-select-option value="Grama">Grama</ion-select-option>
+      <ion-select-option value="Eletrico">Eletrico</ion-select-option>
+      <ion-select-option value="Fantasma">Fantasma</ion-select-option>
+      <ion-select-option value="Voador">Voador</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Região</ion-label>
+    <ion-input [(ngModel)]="regiao" type="text"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="editarPokemon()">Salvar Edições</ion-button>
+</ion-content>

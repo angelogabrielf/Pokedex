@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> POKEDEX </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fomat">
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokemons"  class="lista-item">
+      <ion-label>
+      Nome: {{ pokemon.nome }} <br>
+      Poder:{{ pokemon.poder }} <br>
+      Regiao:{{ pokemon.regiao }} <br>
+      Tipo:{{ pokemon.tipo }} <br>
+      <ion-badge [style.background-color]="pokemon.corRaridade">{{ pokemon.raridade }}</ion-badge> <br>
+    </ion-label>
+      <ion-button fill="clear" color="primary" (click)="navegarParaEditarPokemon(pokemon)">Editar</ion-button> 
+      <ion-button fill="clear" color="danger" (click)="removerPokemon(pokemon)">Remover</ion-button> 
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="navegarParaAdicionarPokemon()">Adicionar Pokémon</ion-button>
+</ion-content>
